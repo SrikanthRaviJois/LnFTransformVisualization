@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Transform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .input-container label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .input-container select {
+            padding: 8px;
+            font-size: 14px;
+        }
+        .input-container button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LFT Visualization</h1>
+        <form id="transformForm" onsubmit="redirectToSite(event)">
+            <div class="input-container">
+                <label for="transformSelect">Select Transform:</label>
+                <select id="transformSelect" name="transform">
+                    <option value="laplace">Laplace</option>
+                    <option value="fourier">Fourier</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectToSite(event) {
+            event.preventDefault();
+            const transform = document.getElementById('transformSelect').value;
+            if (transform === 'laplace') {
+                window.location.href = 'http://127.0.0.1:8080/laplace';
+            } else if (transform === 'fourier') {
+                window.location.href = 'http://127.0.0.1:8080/fourier';
+            }
+        }
+    </script>
+</body>
+</html>

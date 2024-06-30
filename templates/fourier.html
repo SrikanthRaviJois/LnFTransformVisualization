@@ -60,10 +60,11 @@
     </style>
 </head>
 <body>
-    <div class="header">
+    <!-- <div class="header">
         <h1>Fourier Transform</h1>
-    </div>
+    </div> -->
     <div class="form-container">
+        <h1>Fourier Transform Visualization</h1>
         <form method="POST">
             <label for="function">Enter a function of x (e.g., sin(2*pi*x) + sin(pi*x)):</label>
             <input type="text" id="function" name="function" value="{{ request.form.function if request.form.function else 'sin(2*pi*x) + sin(pi*x) + sin(5*pi*x) + sin(2.5*pi*x) + sin(3.33*pi*x)' }}">
