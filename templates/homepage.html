@@ -16,7 +16,7 @@
             height: 100vh;
         }
         .container {
-            width: 300px;
+            width: 500px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -55,7 +55,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Choose Transform</h1>
+        <h1>LFT Visualization</h1>
         <form id="transformForm" onsubmit="redirectToSite(event)">
             <div class="input-container">
                 <label for="transformSelect">Select Transform:</label>
@@ -73,9 +73,9 @@
             event.preventDefault();
             const transform = document.getElementById('transformSelect').value;
             if (transform === 'laplace') {
-                window.location.href = 'http://127.0.0.1:5000';
+                window.location.href = 'http://127.0.0.1:8080/laplace';
             } else if (transform === 'fourier') {
-                window.location.href = 'http://127.0.0.1:8000';
+                window.location.href = 'http://127.0.0.1:8080/fourier';
             }
         }
     </script>
