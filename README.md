@@ -19,3 +19,6 @@ Then we improve visualisation using various features of matplotlib
 To compute the integral in the laplace transform we use the quad function present in the scipy library
 Then we use np.linspace to store values related to plotting the graphs
 We also construct the unit step function using the heaviside feature present in sympy.
+
+HOW TO RUN:
+On running the code, a URL for localhost appears in the terminal. Copy the link and paste it in the search bar of your browser. A dropdown appears to select between Fourier and Laplace Transforms. Upon choosing the desired transform, a input bar appears which takes the user input for the function. On submitting, the graph of the Fourier/Laplace Transform of the input function is displayed. 
