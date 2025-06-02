@@ -122,3 +122,4 @@ def update_plot():
 if __name__ == '__main__':
     app.run(debug=True, port=8080)  # Run the app on port 8000
 
+# eheheheheheheheheheeheh
